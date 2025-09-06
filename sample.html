@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML + CSS Cheat Sheet (Student Friendly)</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f4f8fb; color: #333; line-height: 1.6; }
+    h1, h2 { color: #0056b3; }
+    section {
+      margin-bottom: 30px;
+      padding: 15px;
+      background: #fff;
+      border-left: 6px solid #0056b3;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    p.note { background: #e8f4fa; padding: 8px; border-left: 4px solid #0099cc; }
+    code { background: #eee; padding: 2px 4px; border-radius: 4px; }
+    .demo-box { background: #fefefe; border: 1px dashed #aaa; padding: 10px; margin: 10px 0; }
+    canvas, svg { border: 1px solid #ccc; margin: 5px 0; }
+  </style>
+</head>
+<body>
+  <h1>📘 HTML + CSS Cheat Sheet (Student Friendly)</h1>
+  <p>This page demonstrates important HTML and CSS with examples and notes. Perfect for beginners!</p>
+
+  <!-- ========== HTML PART ========== -->
+  <section>
+    <h2>📝 HTML Forms</h2>
+    <p class="note">Forms collect input from users.</p>
+    <div class="demo-box">
+      <form>
+        Name: <input type="text" placeholder="Type here"><br><br>
+        Email: <input type="email"><br><br>
+        Password: <input type="password"><br><br>
+        Checkbox: <input type="checkbox" checked> Subscribe<br><br>
+        Radio: <input type="radio" name="opt"> A <input type="radio" name="opt"> B<br><br>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <h2>🎵 HTML Media</h2>
+    <p class="note">HTML supports images, audio, and video.</p>
+    <div class="demo-box">
+      <img src="https://via.placeholder.com/120" alt="Image">
+      <br>
+      <audio controls>
+        <source src="sample.mp3" type="audio/mpeg">
+      </audio>
+      <br>
+      <video width="200" controls>
+        <source src="sample.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <section>
+    <h2>⚡ HTML5 APIs</h2>
+    <p class="note">Examples: Geolocation, Drag & Drop, Storage.</p>
+    <div class="demo-box">
+      <button onclick="getLocation()">📍 Get Location</button>
+      <p id="geo"></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>🎨 HTML Canvas & SVG</h2>
+    <div class="demo-box">
+      <canvas id="myCanvas" width="200" height="100"></canvas>
+      <svg width="200" height="100">
+        <circle cx="50" cy="50" r="40" stroke="blue" fill="lightblue"></circle>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========== CSS PART ========== -->
+  <section>
+    <h2>🎨 CSS Basics</h2>
+    <p class="note">CSS styles HTML elements. Example: <code>color</code>, <code>font-size</code>, <code>background</code>.</p>
+    <div class="demo-box" style="color: red; background: #ffe5e5; padding: 10px;">
+      This text is red with a light background.
+    </div>
+  </section>
+
+  <section>
+    <h2>📦 CSS Box Model</h2>
+    <p class="note">Every element has <code>margin</code>, <code>border</code>, <code>padding</code>, <code>content</code>.</p>
+    <div class="demo-box" style="margin:10px; border:5px solid blue; padding:10px;">
+      Content inside box with padding and border.
+    </div>
+  </section>
+
+  <section>
+    <h2>📍 CSS Positioning</h2>
+    <p class="note">Static, relative, absolute, fixed, sticky.</p>
+    <div class="demo-box" style="position: relative; height: 80px; background:#eee;">
+      <div style="position: absolute; top:10px; right:10px; background:yellow;">Absolute</div>
+      <div style="position: relative; top:20px; left:10px; background:lightgreen;">Relative</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📐 CSS Flexbox</h2>
+    <p class="note">Flexbox arranges items in rows/columns easily.</p>
+    <div class="demo-box" style="display:flex; gap:10px; background:#eee; padding:10px;">
+      <div style="flex:1; background:lightblue; text-align:center;">1</div>
+      <div style="flex:2; background:lightgreen; text-align:center;">2</div>
+      <div style="flex:1; background:lightcoral; text-align:center;">3</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🕸️ CSS Grid</h2>
+    <p class="note">Grid arranges elements in rows and columns.</p>
+    <div class="demo-box" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:5px;">
+      <div style="background:lightblue;">A</div>
+      <div style="background:lightgreen;">B</div>
+      <div style="background:lightcoral;">C</div>
+      <div style="background:lightgoldenrodyellow;">D</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>✨ CSS Transitions & Animations</h2>
+    <p class="note">Animations bring elements to life.</p>
+    <div class="demo-box">
+      <div class="box"></div>
+    </div>
+    <style>
+      .box {
+        width: 50px; height: 50px;
+        background: orange;
+        transition: transform 0.5s;
+      }
+      .box:hover {
+        transform: rotate(45deg) scale(1.2);
+      }
+    </style>
+  </section>
+
+  <section>
+    <h2>🎯 CSS Pseudo-classes</h2>
+    <p class="note">Special states like <code>:hover</code>, <code>:first-child</code>, etc.</p>
+    <ul class="demo-box pseudo-demo">
+      <li>Hover me</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ul>
+    <style>
+      .pseudo-demo li:hover { background: yellow; }
+      .pseudo-demo li:first-child { color: red; }
+    </style>
+  </section>
+
+  <!-- Deprecated -->
+  <section>
+    <h2>📜 Deprecated Tags</h2>
+    <p class="note">Not recommended anymore.</p>
+    <div class="demo-box">
+      <marquee>Scrolling Text (deprecated)</marquee>
+      <center>Centered Text (deprecated)</center>
+      <font color="red">Font Tag (deprecated)</font>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    // Geolocation
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          pos => document.getElementById("geo").innerText =
+            "Lat: " + pos.coords.latitude + ", Lon: " + pos.coords.longitude,
+          err => document.getElementById("geo").innerText = "Error: " + err.message
+        );
+      }
+    }
+
+    // Canvas
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    ctx.fillStyle = "orange";
+    ctx.fillRect(10, 10, 150, 80);
+  </script>
+
+
+ <h1>📘 HTML + CSS + HTML5 APIs Cheat Sheet</h1>
+  <p>This page demonstrates important HTML, CSS, and HTML5 APIs with examples and notes. Perfect for beginners!</p>
+
+  <!-- HTML5 APIs Section -->
+  <section>
+    <h2>📍 Geolocation API</h2>
+    <p class="note">Finds your location (with permission).</p>
+    <div class="demo-box">
+      <button onclick="getLocation()">Get My Location</button>
+      <p id="geo"></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>💾 Web Storage API</h2>
+    <p class="note">Stores data in the browser (persistent in <code>localStorage</code>).</p>
+    <div class="demo-box">
+      <input id="storeInput" type="text" placeholder="Type something">
+      <button onclick="saveData()">Save</button>
+      <button onclick="loadData()">Load</button>
+      <p id="storageResult"></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>🖱️ Drag & Drop API</h2>
+    <p class="note">Drag elements and drop them into targets.</p>
+    <div class="demo-box">
+      <div id="dragItem" class="draggable" draggable="true">Drag me</div>
+      <div id="dropzone">Drop here</div>
+      <p id="dropResult"></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>🎤 Web Speech API</h2>
+    <p class="note">Lets the browser recognize or speak text.</p>
+    <div class="demo-box">
+      <button onclick="speakText()">🔊 Speak</button>
+      <p><em>Speech recognition requires Chrome / Edge.</em></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>📷 Media Devices API</h2>
+    <p class="note">Accesses camera & microphone (with permission).</p>
+    <div class="demo-box">
+      <video id="camera" autoplay width="200"></video><br>
+      <button onclick="startCamera()">Start Camera</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔊 Web Audio API</h2>
+    <p class="note">Generates sounds in the browser.</p>
+    <div class="demo-box">
+      <button onclick="playBeep()">Play Beep</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>🖥️ Fullscreen API</h2>
+    <p class="note">Makes elements go fullscreen.</p>
+    <div class="demo-box">
+      <div id="fullscreenBox" style="background: lightgreen; padding: 20px;">Click button to go fullscreen</div>
+      <button onclick="goFullscreen()">Go Fullscreen</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔄 Fetch API</h2>
+    <p class="note">Fetches data from a server.</p>
+    <div class="demo-box">
+      <button onclick="fetchData()">Fetch Example Data</button>
+      <pre id="fetchResult"></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>⚡ Web Workers</h2>
+    <p class="note">Runs JavaScript in the background.</p>
+    <div class="demo-box">
+      <button onclick="startWorker()">Start Worker</button>
+      <button onclick="stopWorker()">Stop Worker</button>
+      <p id="workerResult"></p>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    // Geolocation API
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          pos => document.getElementById("geo").innerText = 
+            "Lat: " + pos.coords.latitude.toFixed(4) + 
+            ", Lon: " + pos.coords.longitude.toFixed(4),
+          err => document.getElementById("geo").innerText = "Error: " + err.message
+        );
+      }
+    }
+
+    // Web Storage API
+    function saveData() {
+      let val = document.getElementById("storeInput").value;
+      localStorage.setItem("myData", val);
+      alert("Saved!");
+    }
+    function loadData() {
+      document.getElementById("storageResult").innerText = 
+        "Stored: " + (localStorage.getItem("myData") || "Nothing saved");
+    }
+
+    // Drag & Drop API
+    const dragItem = document.getElementById("dragItem");
+    const dropzone = document.getElementById("dropzone");
+    dragItem.addEventListener("dragstart", e => e.dataTransfer.setData("text", "Dragged"));
+    dropzone.addEventListener("dragover", e => e.preventDefault());
+    dropzone.addEventListener("drop", e => {
+      e.preventDefault();
+      document.getElementById("dropResult").innerText = "Item dropped!";
+    });
+
+    // Web Speech API (speech synthesis)
+    function speakText() {
+      let utter = new SpeechSynthesisUtterance("Hello, this is the Web Speech API in action!");
+      speechSynthesis.speak(utter);
+    }
+
+    // Media Devices API
+    function startCamera() {
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => document.getElementById("camera").srcObject = stream)
+        .catch(err => alert("Error: " + err));
+    }
+
+    // Web Audio API
+    function playBeep() {
+      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioCtx.createOscillator();
+      oscillator.type = "square";
+      oscillator.frequency.value = 440;
+      oscillator.connect(audioCtx.destination);
+      oscillator.start();
+      setTimeout(() => oscillator.stop(), 500);
+    }
+
+    // Fullscreen API
+    function goFullscreen() {
+      document.getElementById("fullscreenBox").requestFullscreen();
+    }
+
+    // Fetch API
+    function fetchData() {
+      fetch("https://jsonplaceholder.typicode.com/todos/1")
+        .then(res => res.json())
+        .then(data => document.getElementById("fetchResult").innerText = JSON.stringify(data, null, 2))
+        .catch(err => document.getElementById("fetchResult").innerText = "Error: " + err);
+    }
+
+    // Web Workers
+    let worker;
+    function startWorker() {
+      if (window.Worker) {
+        worker = new Worker(URL.createObjectURL(new Blob([`
+          let i = 0;
+          setInterval(() => postMessage(++i), 1000);
+        `], { type: "text/javascript" })));
+        worker.onmessage = e => document.getElementById("workerResult").innerText = "Worker count: " + e.data;
+      }
+    }
+    function stopWorker() {
+      if (worker) { worker.terminate(); document.getElementById("workerResult").innerText = "Worker stopped"; }
+    }
+  </script>
+
+
+
+</body>
+
+
+</html>
